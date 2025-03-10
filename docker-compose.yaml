@@ -6,6 +6,7 @@ services:
     build: 
       context: node 
     container_name: app-node
+    restart: always
     entrypoint: dockerize -wait tcp://db-mysql:3306 timeout 20s node index.js
     networks:
       - minharede2
