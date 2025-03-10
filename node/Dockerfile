@@ -4,6 +4,8 @@ WORKDIR /usr/scr/app
 
 COPY . .
 
+RUN npm install express --save
+
 RUN npm install mysql --save
 
 ENV DOCKERIZE_VERSION v0.9.2
